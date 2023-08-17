@@ -140,8 +140,7 @@ export class ThemeService {
   }
 
   toggleTheme(): void {
-    const newActiveTheme = this.activeTheme === 'light' ? 'dark' : 'light';
-    this.activeTheme$.next(newActiveTheme);
+    this.activeTheme = this.activeTheme === 'light' ? 'dark' : 'light';
 
     this.document.body.classList.toggle('light');
     this.document.body.classList.toggle('dark');
